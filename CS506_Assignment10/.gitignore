@@ -1,0 +1,15 @@
+CS506_assignment10.ipynb
+house.jpg
+.ipynb_checkpoints/
+.idea
+# Ignore virtual environments
+venv/
+# Ignore Python compiled files
+*.pyc
+*.pyo
+__pycache__/
+# Ignore system files
+.DS_Store
+.idea/
+coco_images_resized/
+image_embeddings.pickle

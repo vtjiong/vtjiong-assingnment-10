@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search</title>
+    <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Search</h1>
+        <form id="search-form">
+            <label for="image-query">Image query:</label>
+            <input type="file" id="image-query" name="image-query" accept="image/*">
+             <button type="button" id="clear-file">Clear</button>
+
+            <label for="text-query">Text query:</label>
+            <input type="text" id="text-query" name="text-query" placeholder="Enter text query...">
+
+            <label for="hybrid-weight">Hybrid Query Weight (α):</label>
+            <input type="text" id="hybrid-weight" name="hybrid-weight" placeholder="e.g., 0.8">
+
+            <div id="num-components-container" style="display: none;">
+                <p><strong>If number of components is empty, CLIP embedding will be used</strong></p>
+                <label for="num-components">Number of Principal Components (k):</label>
+                <input type="number" id="num-components" name="num-components" placeholder="Enter number of components...">
+            </div>
+
+            <label for="query-type">Select query type:</label>
+            <select id="query-type" name="query-type">
+                <option value="text">Text query</option>
+                <option value="image">Image query</option>
+                <option value="hybrid">Hybrid query</option>
+            </select>
+
+            <input id="search" type="submit" value="Search">
+        </form>
+
+        <div class="results">
+            <h2>Top Search Results</h2>
+        </div>
+    </div>
+<script src="/static/script.js"></script>
+</body>
+</html>
